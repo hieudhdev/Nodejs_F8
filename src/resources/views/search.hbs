@@ -1,0 +1,16 @@
+
+{{!-- method="POST" đổi phương thức từ GET thành POST, mặc định của input form HTML là GET --}}
+{{!-- method ở đây là request method, còn action ở đây là request URL--}}
+<form method="get" action="">   
+
+  <div class="form-group">
+    <label for="search-input">Search Bar</label>
+    {{!-- Attribute name (q là param) đóng vai trò như 1 properties trong object query (Bài query parameter) --}}
+    {{!-- Ví Dụ: khi nhập text vào thẻ input "f8 lap trinh", trên URL ta có:http://localhost:3000/search?q=f8+lap+trinh  --}}
+    <input type="text" name="q" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập từ khóa...">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+
+</form>
+

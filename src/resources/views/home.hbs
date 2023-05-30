@@ -1,0 +1,23 @@
+<div class="mt-4">
+    <div class="row">
+
+        {{#each courses}}
+        <div class="col-sm-6 col-lg-4">
+        {{!-- Đọc doc: truyền this vào, this này là element, nó là từng obj course trong database --}}
+            <div class="card card-course-item" style="width: 18rem;" >
+                <a href="/courses/{{this.slug}}">   {{!-- thêm thẻ a vào để bấm --}}
+                    <img class="card-img-top" src="{{this.img}}" alt="Thumbnail of course">
+                </a>
+                <div class="card-body">
+                    <a href="/courses/{{this.slug}}">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    </a>
+                    <p class="card-text">{{this.description}}</p>
+                    <a href="/courses/{{this.slug}}" class="btn btn-primary">Learn now</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
